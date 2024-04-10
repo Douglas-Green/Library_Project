@@ -3,30 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="app.js" defer></script>
+
     <title>Library Project</title>
   </head>
   <body>
-    <main
-      style="
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      "
-    >
+    <main>
       <div>
         <h1>Library Project</h1>
+        <form id="addBookForm">
+          <label for="title">Title:</label><br>
+          <input type="text" id="title" name="title" placeholder="Enter Book Title"><br>
+          <label for="author">Author:</label><br>
+          <input type="text" id="author" name="author" placeholder="Enter Author Name"><br>
+          <label for="read">Read:</label><br>
+          <input type="checkbox" id="read" name="read"><br>
+          <input type="submit" value="Add Book">
+        </form>
+
         <div id="library">
-          <!-- Add table here -->
-          <table id="table" style="min-width: 680px; margin: 2rem">
+          <table id="table">
             <thead>
               <tr>
                 <th>Title</th>
                 <th>Author</th>
                 <th>Read</th>
+                <th>Remove</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody id="book-list">
               <tr>
                 <td>Name of the Wind</td>
                 <td>Patrick Rothfuss</td>
@@ -45,6 +51,5 @@
         </div>
     </main>
 
-    <script src="app.js"></script>
   </body>
 </html>

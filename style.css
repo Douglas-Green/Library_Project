@@ -1,112 +1,84 @@
+/* General Body Settings */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: flex-start;
-  background-color: #333;
-  color: #fff;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  height: 100vh;
+    background-color: #121212; /* Eerie Black as the dominant color */
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 20px;
 }
 
-main {
-  width: 90%;
-  max-width: 1200px;
-  margin-top: 2rem;
-}
-
+/* Main heading and form settings */
 h1 {
-  font-size: 8.5rem;
-  color: #f9a828;
-  text-shadow: 0.2rem 0.2rem 0.2rem white;
+    color: #FBC02D; /* Bright yellow for accent */
+    text-align: center;
 }
 
 form {
-  margin-bottom: 2rem;
+    background-color: #333333; /* Jet for secondary color */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
 }
 
 label {
-  font-size: 1.2rem;
+    margin-top: 10px;
+    display: block;
 }
 
-input[type="text"] {
-  width: 50%;
-  padding: 0.5rem;
-  margin: 0.5rem 0;
-  font-size: 1.5rem;
-  text-align: center;
+input[type="text"], input[type="submit"] {
+    width: calc(100% - 22px); /* Full width minus padding */
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
 }
 
 input[type="submit"] {
-  padding: 1rem 2rem;
-  font-size: 2rem;
-  background-color: #f9a828;
-  border: none;
-  color: white;
-  text-shadow: 0.1rem 0.1rem 0.1rem blue;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  border-radius: 20px;
+    background-color: #FBC02D; /* Bright yellow for accent */
+    color: #121212;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  transform: scale(1.3);
-}
-input[type="submit"]:active {
-  transform: scale(0.7);
-  background-color: green;
+    background-color: #fdd835; /* Lighter yellow */
 }
 
-#table {
-  width: 100%;
-  margin: 2rem 0;
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
 }
 
-#table th,
-#table td {
-  padding: 1rem;
-  text-align: left;
+th, td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #333; /* Secondary color */
 }
 
-#table th {
-  background-color: #f9a828;
-  color: #333;
+th {
+    background-color: #333333; /* Jet for secondary color */
 }
 
-#table tr:nth-child(even) {
-  background-color: #555;
+input[type="checkbox"] {
+    accent-color: #FBC02D; /* Bright yellow accent color */
 }
 
-button {
-  background-color: #f9a828;
-  color: #333;
-  border: none;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    form, table {
+        width: 95%;
+    }
 }
 
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
+/* Utility Classes */
+.disabled {
+    opacity: 0.6;
+}
 
-  label {
-    font-size: 1rem;
-  }
-
-  input[type="text"] {
-    font-size: 0.8rem;
-    text-align: center;
-  }
-
-  input[type="submit"] {
-    font-size: 0.8rem;
-  }
-
-  #table th,
-  #table td {
-    padding: 0.5rem;
-  }
+.hidden {
+    display: none;
 }
